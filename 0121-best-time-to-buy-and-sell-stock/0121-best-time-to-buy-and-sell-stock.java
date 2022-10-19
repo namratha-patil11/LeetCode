@@ -9,7 +9,7 @@ class Solution {
            
             if(prices[i] < buy){
                 buy = prices[i];
-            }else if (prices[i] > buy && (prices[i] - buy) >  profit){
+            }else if (prices[i] - buy >  profit){
                 profit = prices[i] - buy;
             }
         }
