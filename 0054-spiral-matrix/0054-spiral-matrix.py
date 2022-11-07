@@ -1,15 +1,10 @@
 class Solution:
     def spiralOrder(self, matrix: List[List[int]]) -> List[int]:
         
-        right = [0,1]
-        down = [1,0]
-        left = [0,-1]
-        up = [-1,0]
-        directions = [right,down,left,up] 
+        directions = [[0,1],[1,0],[0,-1],[-1,0]] 
         R = len(matrix)
         C = len(matrix[0])
         output = []
-        #i,j = 0,0
         r,c = 0,0
         
         def isvalid(i,j,direction):
