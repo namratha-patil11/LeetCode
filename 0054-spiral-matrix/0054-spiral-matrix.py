@@ -15,8 +15,6 @@ class Solution:
         def isvalid(i,j,direction):
             i += direction[0]
             j += direction[1]
-            print("i--99-",i)
-            print("j--99-",j)
             if  i < 0 or i >= R or j < 0 or j >= C or matrix[i][j] == 101:
                 return False
             return True
@@ -27,7 +25,6 @@ class Solution:
             j += direction[1]
             output.append(matrix[i][j])
             matrix[i][j] = 101
-            print(output)
             r,c = i,j
             if isvalid(i,j,direction):
                 dfs(r,c,direction)
@@ -38,7 +35,6 @@ class Solution:
                 output.append(matrix[r][c])
             matrix[r][c] = 101
             for direction in directions:
-                print("dir =",direction)
                 while True:
                     if not isvalid(r,c,direction):
                         break
