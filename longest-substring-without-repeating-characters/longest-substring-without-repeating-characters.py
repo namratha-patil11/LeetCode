@@ -20,7 +20,7 @@ class Solution:
                 else:
                     setOfChars.add(s[j])
                     curLen += 1
-                    print(curLen)
+                    # print(curLen)
             maxLen = max(curLen,maxLen)
 
         
